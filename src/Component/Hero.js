@@ -1463,7 +1463,7 @@ const ASHRAESInputs = () => (
 <input
 type="number"
 id="floorArea"
-value={floorArea}
+value={unit === 'SI' ? 0.09290304 * floorArea : floorArea}
 onChange={event => {
   const newFloorArea = event.target.value;
   const newSupplyAir = newFloorArea * 0.9; // Calculate the new supply air based on floor area
